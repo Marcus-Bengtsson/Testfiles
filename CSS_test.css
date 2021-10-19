@@ -1,4 +1,17 @@
-p {
-    color: red;
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#test1 {
+    color: blue;
+    font-size: 40px;
+}
+
+p.center {
+    color: green;
+}
+
+h1, h2, p {
     text-align: center;
+    color: red;
   }
