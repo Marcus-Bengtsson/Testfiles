@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 40px 10fr 20px;
+            grid-template-areas: 'header header' 
+                                 'menu mainContent'
+                                 'footer footer';
+        }
+
+        div.header {
+            grid-area: header;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            color: white;
+            background-image: url("gradient_blue.png");
+        }
+
+        div.menu {
+            grid-area: menu;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        div.mainContent {
+            grid-area: mainContent;
+            padding-left: 5px;
+        }
+
+        div.footer {
+            background-color: lightgrey;
+            grid-area: footer;
+            text-align: right;
+            padding-right: 5px;
+        }
+        a {
+            color: red;
+        }
+
+        @media only screen and (max-width: 600px) {
+            div.page {
+                grid-template-columns: 1fr;
+                grid-template-rows: 40px 1fr 4fr 20px;
+                grid-template-areas: 'header' 
+                                     'menu'
+                                     'mainContent'
+                                     'footer';
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">My Website</div>
+        <div class="menu">
+            <p style="font-size: 25px">Navigation</p>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Home</a>
+            <br>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">About</a>
+            <br>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Contact</a>
+        </div>
+        
+        <div class="mainContent">
+            <h1>Home Page</h1>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed eu ex turpis. Nullam malesuada augue vel augue vulputate, non tempus lectus auctor. 
+            Nulla tempus dui non mattis auctor. Nam interdum erat sed velit eleifend luctus. 
+            Curabitur maximus justo a metus tristique commodo et sit amet tortor. 
+            Duis nec maximus sem. Vestibulum pretium at felis fermentum lobortis. 
+            Vestibulum porttitor elementum urna, a tempus ipsum venenatis rutrum. 
+            Duis rutrum lectus enim, sed auctor urna consequat eget. 
+            Nulla vitae felis nec urna tincidunt molestie eu a augue. 
+            Integer pretium eleifend urna in tincidunt. 
+            Aliquam molestie lacus non velit blandit hendrerit. 
+            Donec porta pellentesque tellus in rhoncus. 
+            Phasellus id pellentesque lorem, sit amet efficitur libero. 
+            Curabitur sed est sed eros pretium condimentum ut non leo.
+        </div>
+        <div class="footer">Copyright 2021 Marcus Bengtsson</div>
+    </div>
+</body>
+</html>
