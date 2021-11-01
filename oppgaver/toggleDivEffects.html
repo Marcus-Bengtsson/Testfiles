@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Div Effects</title>
+
+    <style>
+        .color {
+            color: chocolate;
+        }
+        .border {
+            border: 2px solid black
+        }
+        .backgroudColor {
+            background-color: cornflowerblue;
+        }
+        .fontFamily {
+            font-family: Impact;
+        }
+        .fontSize {
+            font-size: 20px;
+        }
+        div.selected::before {
+            content: "🡆";
+        }
+
+        div.selected::after {
+            content: "🡄";
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1" onclick="boxPress(this)">aasd</div>
+    <div id="box2" onclick="boxPress(this)">aasd</div>
+    <div id="box3" onclick="boxPress(this)">aasd</div>
+    <div id="box4" onclick="boxPress(this)">aasd</div>
+    <div id="box5" onclick="boxPress(this)">aasd</div>
+    <input id="checkBox1" type="checkbox" onchange="toggleStyle()">
+    <input id="checkBox2" type="checkbox" onchange="toggleStyle()">
+    <input id="checkBox3" type="checkbox" onchange="toggleStyle()">
+    <input id="checkBox4" type="checkbox" onchange="toggleStyle()">
+    <input id="checkBox5" type="checkbox" onchange="toggleStyle()">
+    <script>
+
+        function boxPress(divElement) {
+            divElement.classList.toggle('selected');
+        }
+
+        function toggleStyle() {
+            var isChecked = document.getElementById('checkBox1').checked;
+            
+            document.getElementById('box1').classList.toggle('color', isChecked);
+        }
+    </script>
+</body>
+
+</html>
